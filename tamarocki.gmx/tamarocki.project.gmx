@@ -14,9 +14,14 @@
     <sprite>sprites\spr_button</sprite>
     <sprite>sprites\spr_sun_moon</sprite>
     <sprite>sprites\spr_darkness</sprite>
+    <sprite>sprites\spr_candy</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grass</background>
+    <background>background\bg_bottom_grass</background>
+    <background>background\bg_bottom_snow</background>
+    <background>background\bg_top_night</background>
+    <background>background\bg_top_day</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">

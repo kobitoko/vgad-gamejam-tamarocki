@@ -34,4 +34,3 @@ if (audio_is_playing(global.currentMusic))
 if (not audio_is_playing(argument0))
     global.currentMusic = argument0;
     audio_play_sound(argument0, 10, true);
-

@@ -266,6 +266,7 @@
             <string>draw_text(10, 10, obj_sun_moon.image_angle);
 
 var angle = 30;
+d3d_set_depth(-10);
 if (global.daynight == true and obj_sun_moon.image_angle &gt;= angle) {
     var alpha = (obj_sun_moon.image_angle-30)/(50-angle);
     draw_sprite_ext(spr_darkness, 0, 0, 0, 1, 1, 0, c_white, alpha);
