@@ -1,5 +1,8 @@
+# TAMAROCKI
+The Future of Survival
+
+
+
+Made for:
 vgad-gamejam-tamarocki
 Theme: Ensured Survival
-# TAMAROCKI
-The future of Survival
-
