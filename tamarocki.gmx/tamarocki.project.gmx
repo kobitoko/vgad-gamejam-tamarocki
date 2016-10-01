@@ -19,9 +19,13 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_click.gml</script>
+    <script>scripts\scr_text.gml</script>
+    <script>scripts\scr_init.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_rock</object>
+    <object>objects\obj_controller</object>
+    <object>objects\obj_button</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>
