@@ -49,28 +49,22 @@
           <argument>
             <kind>1</kind>
             <string>// 1.5 degrees per sec per framerate
-self.image_angle +=1.5/30;
+//self.image_angle +=1.5/30;
 // Debug speed
-//self.image_angle +=0.5;
+self.image_angle +=0.5;
 
 if (self.image_angle &gt;= 50) {
     self.image_angle -= 100;
-    if(global.day) {
-        global.day = false;
+    if(global.daynight) {
+        global.daynight = false;
         self.image_index = 1;
         // Change the music to night time
-        if (audio_is_playing(snd_daytime))
-            audio_stop_sound(snd_daytime);
-        if (not audio_is_playing(snd_night))
-            audio_play_sound(snd_night, 10, true);
+        script_execute(scr_playBgm, snd_night);
     } else {
-        global.day = true;
+        global.daynight = true;
         self.image_index = 0;
         // Change the music to daytime
-        if (audio_is_playing(snd_night))
-            audio_stop_sound(snd_night);
-        if (not audio_is_playing(snd_daytime))
-            audio_play_sound(snd_daytime, 10, true);
+        script_execute(scr_playBgm, snd_daytime);
     }
 }
 </string>

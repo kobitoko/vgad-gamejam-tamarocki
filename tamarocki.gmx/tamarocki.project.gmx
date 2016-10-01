@@ -13,16 +13,20 @@
     <sprite>sprites\spr_rock</sprite>
     <sprite>sprites\spr_button</sprite>
     <sprite>sprites\spr_sun_moon</sprite>
+    <sprite>sprites\spr_darkness</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grass</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_click.gml</script>
+    <script>scripts\scr_master_step.gml</script>
     <script>scripts\scr_text.gml</script>
     <script>scripts\scr_init.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\font1</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_rock</object>
     <object>objects\obj_controller</object>

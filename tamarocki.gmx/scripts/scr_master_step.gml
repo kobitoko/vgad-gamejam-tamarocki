@@ -1,3 +1,7 @@
+#define scr_master_step
+if (not obj_button.image_index == 0) {
+    obj_button.image_index = 0;
+}
 #define scr_click
 var device = 0;
 if (device_mouse_check_button_pressed(device, mb_left)) {
@@ -22,7 +26,12 @@ if (device_mouse_check_button_released(device, mb_left)) {
     }
 }
 
-#define scr_master_step
-if (not obj_button.image_index == 0) {
-    obj_button.image_index = 0;
-}
+#define scr_playBgm
+// Argument0 has to be a sound object
+var musicToPlay = argument0;
+if (audio_is_playing(global.currentMusic))
+    audio_stop_sound(global.currentMusic);
+if (not audio_is_playing(argument0))
+    global.currentMusic = argument0;
+    audio_play_sound(argument0, 10, true);
+

@@ -16,8 +16,10 @@ for (var i=0; i<queueSize; i+=4) {
     var yVal = ds_queue_dequeue(global.textDialogs);
     var alpha = ds_queue_dequeue(global.textDialogs);
     // draw text
+    draw_set_font(font1);
     draw_set_alpha(alpha)
-    draw_text(xVal, yVal, str);
+    draw_text_ext(xVal, yVal, str, 20, room_width - xVal - 50);
+    draw_set_font(global.mainfont)
     // reset alpha
     draw_set_alpha(1.0)
     // Do not requeue if alpha is equal or lower than the fadeSpd.

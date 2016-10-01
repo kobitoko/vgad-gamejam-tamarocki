@@ -139,7 +139,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>scr_master_step</script>
+            <script>scr_click</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -179,7 +179,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>scr_click</script>
+            <script>scr_master_step</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -245,6 +245,8 @@
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -262,6 +264,17 @@
           <argument>
             <kind>1</kind>
             <string>draw_text(10, 10, obj_sun_moon.image_angle);
+
+var angle = 30;
+if (global.daynight == true and obj_sun_moon.image_angle &gt;= angle) {
+    var alpha = (obj_sun_moon.image_angle-30)/(50-angle);
+    draw_sprite_ext(spr_darkness, 0, 0, 0, 1, 1, 0, c_white, alpha);
+} else if (global.daynight == false and obj_sun_moon.image_angle &lt;= angle){
+    draw_sprite_ext(spr_darkness, 0, 0, 0, 1, 1, 0, c_white, 1);
+} else if (global.daynight == false and obj_sun_moon.image_angle &gt;= angle) {
+        var alpha = 1 - ((obj_sun_moon.image_angle-angle)/(50-angle));
+        draw_sprite_ext(spr_darkness, 0, 0, 0, 1, 1, 0, c_white, alpha);
+}
 </string>
           </argument>
         </arguments>
