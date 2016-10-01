@@ -25,4 +25,3 @@ for (var i=0; i<queueSize; i+=4) {
         ds_queue_enqueue(global.textDialogs, str, xVal, yVal-floatSpd, alpha-fadeSpd);
     }
 }
-

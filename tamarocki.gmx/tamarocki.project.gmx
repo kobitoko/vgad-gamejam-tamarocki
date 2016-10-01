@@ -12,6 +12,7 @@
   <sprites name="sprites">
     <sprite>sprites\spr_rock</sprite>
     <sprite>sprites\spr_button</sprite>
+    <sprite>sprites\spr_sun_moon</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grass</background>
@@ -26,6 +27,7 @@
     <object>objects\obj_rock</object>
     <object>objects\obj_controller</object>
     <object>objects\obj_button</object>
+    <object>objects\obj_sun_moon</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>
