@@ -39,14 +39,6 @@ if (device_mouse_check_button(device, mb_left)) {
         obj_button_chieves.image_index = 1;
     }
 }
-if (device_mouse_check_button_released(device, mb_left)) {
-    obj_button_chieves.image_index = 0;
-    var colliders = collision_point(device_mouse_x(device), device_mouse_y(device),
-        obj_button_chieves, true, false);
-    if (colliders == obj_button_chieves.id) {
-        
-    }
-}
 //SUN & MOON
 if (device_mouse_check_button_pressed(device, mb_left)) {
     var colliders = collision_point(device_mouse_x(device), device_mouse_y(device),
