@@ -229,7 +229,6 @@ var angle = 30;
 if (global.daynight == true and obj_sun_moon.image_angle &gt;= angle) {
     // Becoming Night
     global.alpha = (obj_sun_moon.image_angle-30)/(50-angle);
-    
     draw_sprite_ext(spr_darkness, 0, 0, 0, 1, 1, 0, c_white, global.alpha);
 } else if (global.daynight == false and obj_sun_moon.image_angle &lt;= angle){
     //Night
@@ -240,6 +239,29 @@ if (global.daynight == true and obj_sun_moon.image_angle &gt;= angle) {
     draw_sprite_ext(spr_darkness, 0, 0, 0, 1, 1, 0, c_white, global.alpha);
 } else if (global.daynight == true) {
     global.alpha = 0;
+}
+
+var season = global.day div 3;
+if (season == 0) {
+    //background_visible[0] = true;
+    background_visible[2] = false;
+    background_visible[3] = false;
+    background_visible[4] = false;
+} else if (season == 1) {
+    //background_visible[0] = false;
+    background_visible[2] = true;
+    background_visible[3] = false;
+    background_visible[4] = false;
+} else if (season == 2) {
+    //background_visible[0] = false;
+    background_visible[2] = false;
+    background_visible[3] = true;
+    background_visible[4] = false;
+} else if (season == 3) {
+    //background_visible[0] = false;
+    background_visible[2] = false;
+    background_visible[3] = false;
+    background_visible[4] = true;
 }
 </string>
           </argument>

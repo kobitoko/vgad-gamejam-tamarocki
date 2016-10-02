@@ -50,9 +50,9 @@ var days = 0;
           <argument>
             <kind>1</kind>
             <string>//Season: 0 = summer, 1 = fall, 2 = winter, 3 = spring, 4 IS DEATH
-season = global.day div 3;
+season = (global.day div 3) % 4;
 //Day: 3 days per season
-day = global.day % 3;
+days = global.day % 3;
 </string>
           </argument>
         </arguments>
@@ -75,8 +75,9 @@ day = global.day % 3;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_font(font1);
-draw_text(self.x - string_width(global.seasons[season]+" "+string(day+1)), self.y, global.seasons[season]+" "+string(day+1));
+            <string>draw_set_colour(c_black);
+draw_set_font(font1);
+draw_text(self.x - (string_width(global.seasons[season]+" "+string(days+1)) + 10), self.y + 10, global.seasons[season]+" "+string(days+1));
 </string>
           </argument>
         </arguments>

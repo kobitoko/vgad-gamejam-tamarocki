@@ -29,10 +29,11 @@
     <sprite>sprites\spr_nightsky</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\bg_grass</background>
     <background>background\bg_bottom_grass</background>
     <background>background\bg_bottom_snow</background>
     <background>background\bg_top_day</background>
+    <background>background\bg_bottom_lightgrass</background>
+    <background>background\bg_bottom_fallleaves</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">

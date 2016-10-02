@@ -7,6 +7,7 @@ globalvar currentMusic;
 globalvar mainfont;
 globalvar seasons;
 globalvar dialogueClick;
+globalvar alpha;
 
 
 global.textDialogs = ds_queue_create();
@@ -24,8 +25,5 @@ global.seasons[0] = "Summer";
 global.seasons[1] = "Autumn";
 global.seasons[2] = "Winter";
 global.seasons[3] = "Spring";
-
-//background_visible[2] = true;
-//background_alpha[2] = 0;
 
 global.alpha = 0;
