@@ -57,11 +57,10 @@
     <instance objName="obj_sun_moon" x="320" y="672" name="inst_B24C5DDA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_button_chieves" x="64" y="160" name="inst_58201065" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="obj_ui_season" x="639" y="0" name="inst_3FD8D395" locked="0" code="" scaleX="1.0971428155899" scaleY="1.39130437374115" colour="4294967295" rotation="0"/>
-    <instance objName="obj_block" x="-160" y="-32" name="inst_6A01611C" locked="0" code="" scaleX="9" scaleY="57" colour="4294967295" rotation="0"/>
-    <instance objName="obj_block" x="-160" y="-96" name="inst_66975B40" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_block" x="-128" y="-128" name="inst_80341BDC" locked="0" code="" scaleX="54" scaleY="9" colour="4294967295" rotation="0"/>
-    <instance objName="obj_block" x="672" y="-32" name="inst_108AF5DE" locked="0" code="" scaleX="10" scaleY="56" colour="4294967295" rotation="0"/>
-    <instance objName="obj_block" x="-128" y="768" name="inst_2DED9458" locked="0" code="" scaleX="56" scaleY="16" colour="4294967295" rotation="0"/>
+    <instance objName="obj_block" x="-64" y="-32" name="inst_A9C081FB" locked="0" code="" scaleX="6" scaleY="54" colour="4294967295" rotation="0"/>
+    <instance objName="obj_block" x="-32" y="-64" name="inst_50188369" locked="0" code="" scaleX="43.6666679382324" scaleY="6" colour="4294967295" rotation="0"/>
+    <instance objName="obj_block" x="608" y="832" name="inst_E07EB1C9" locked="0" code="" scaleX="6.40000009536743" scaleY="-51.2000007629395" colour="4294967295" rotation="0"/>
+    <instance objName="obj_block" x="-192" y="864" name="inst_8AC47DD5" locked="0" code="" scaleX="64" scaleY="-6" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>

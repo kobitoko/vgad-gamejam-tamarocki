@@ -49,7 +49,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>phy_active  = false;
+            <string>var fixCandy;
+var bound;
+self.fixCandy = physics_fixture_create();
+
+physics_fixture_set_circle_shape(self.fixCandy, self.sprite_width / 6);
+physics_fixture_set_collision_group(self.fixCandy, 0);
+physics_fixture_set_density(self.fixCandy, 0.2);
+physics_fixture_set_awake(self.fixCandy, false);
+//physics_fixture_set_sensor(self.fixCandy, true);
+self.bound = physics_fixture_bind(self.fixCandy, self);
 </string>
           </argument>
         </arguments>
@@ -72,62 +81,25 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(self.start == 1) {
-    self.phy_rotation += 100;
-    // do an enable collision.
-    self.phy_active = true;
+            <string>if(start == 1 and self.y &lt; room_height*0.6) {
+    physics_fixture_delete(self.bound);
+    physics_fixture_set_collision_group(self.fixCandy, 0);
+    //physics_fixture_set_sensor(self.fixCandy, false);
+    self.bound = physics_fixture_bind(self.fixCandy, self);
     start = 2;
-} else if (self.start == 2) {
-    self.phy_rotation += 5;
 }
+
+if(self.y &gt; room_height+20 or self.x &lt; -20 or self.x &gt; room_width+20){
+    physics_fixture_delete(self.bound);
+    instance_destroy();
+}
+
 </string>
           </argument>
         </arguments>
       </action>
     </event>
     <event eventtype="6" enumb="4">
-      <action>
-        <libid>1</libid>
-        <id>612</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if_variable</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>start</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>422</id>
-        <kind>1</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -144,64 +116,26 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>physics_apply_force(self.x, self.y, 0, -8000);
+            <string>if(start == 0) {    
+    physics_apply_force(self.x, self.y, 0, -10000)
+    start = 1;
+}
 </string>
           </argument>
         </arguments>
       </action>
-      <action>
-        <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>start</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>1</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>424</id>
-        <kind>2</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
     </event>
   </events>
-  <PhysicsObject>-1</PhysicsObject>
+  <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>
   <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
   <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
-  <PhysicsObjectGroup>0</PhysicsObjectGroup>
+  <PhysicsObjectGroup>1</PhysicsObjectGroup>
   <PhysicsObjectLinearDamping>0.100000001490116</PhysicsObjectLinearDamping>
   <PhysicsObjectAngularDamping>0.100000001490116</PhysicsObjectAngularDamping>
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints>
-    <point>87,84</point>
-    <point>20,88</point>
-  </PhysicsShapePoints>
+  <PhysicsShapePoints/>
 </object>
