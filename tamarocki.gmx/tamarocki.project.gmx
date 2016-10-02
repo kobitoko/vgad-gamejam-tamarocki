@@ -38,19 +38,21 @@
   </backgrounds>
   <paths name="paths">
     <path>paths\path_throw</path>
+    <path>paths\path_rock_fall</path>
   </paths>
   <scripts name="scripts">
     <script>scripts\scr_utils.gml</script>
     <script>scripts\scr_text.gml</script>
     <script>scripts\scr_init.gml</script>
     <script>scripts\scr_dialogue.gml</script>
+    <script>scripts\scr_title_click.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font1</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_rock</object>
     <object>objects\obj_controller</object>
+    <object>objects\obj_rock</object>
     <object>objects\obj_button_feed</object>
     <object>objects\obj_trophyicon</object>
     <object>objects\obj_button_chieves</object>
@@ -65,8 +67,8 @@
     <object>objects\obj_subtitle</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room_title</room>
     <room>rooms\room1</room>
+    <room>rooms\room_title</room>
     <room>rooms\room_highscore</room>
   </rooms>
   <help>
