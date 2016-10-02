@@ -8,6 +8,7 @@ if (device_mouse_check_button_pressed(device, mb_left)) {
     var colliders = collision_point(device_mouse_x(device), device_mouse_y(device),
         obj_rock, true, false);
     if (colliders == obj_rock.id) {
+        global.rockClicks++;
         script_execute(scr_dialogue);
     }
 }
@@ -43,10 +44,7 @@ if (device_mouse_check_button_released(device, mb_left)) {
     var colliders = collision_point(device_mouse_x(device), device_mouse_y(device),
         obj_button_chieves, true, false);
     if (colliders == obj_button_chieves.id) {
-        //script_execute(scr_text ,"Thanks for the food...", obj_rock.x, obj_rock.y, 1);
-        if(not object_exists(obj_candy)) {
-            instance_create(device_mouse_x(device), device_mouse_y(device), obj_candy);
-        }
+        
     }
 }
 
