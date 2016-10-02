@@ -1,7 +1,6 @@
 #define scr_master_step
-if (not obj_button.image_index == 0) {
-    obj_button.image_index = 0;
-}
+// Nothing to do yet here.
+
 #define scr_click
 var device = 0;
 if (device_mouse_check_button_pressed(device, mb_left)) {
@@ -19,6 +18,7 @@ if (device_mouse_check_button(device, mb_left)) {
     }
 }
 if (device_mouse_check_button_released(device, mb_left)) {
+    obj_button.image_index = 0;
     var colliders = collision_point(device_mouse_x(device), device_mouse_y(device),
         obj_button, true, false);
     if (colliders == obj_button.id) {
