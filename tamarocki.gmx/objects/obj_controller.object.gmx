@@ -205,28 +205,6 @@
           </argument>
         </arguments>
       </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>flag = phy_debug_render_aabb | phy_debug_render_core_shapes | phy_debug_render_shapes | phy_debug_render_collision_pairs | phy_debug_render_obb;
- physics_world_draw_debug(flag);
-</string>
-          </argument>
-        </arguments>
-      </action>
     </event>
     <event eventtype="8" enumb="0">
       <action>
@@ -245,12 +223,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var angle = 30;
-d3d_set_depth(-10);
             <string>//draw_text(10, 10, obj_sun_moon.image_angle);
+flag = phy_debug_render_aabb | phy_debug_render_shapes | phy_debug_render_core_shapes | phy_debug_render_collision_pairs | phy_debug_render_obb;
+ physics_world_draw_debug(flag);
 
 var angle = 30;
-
 if (global.daynight == true and obj_sun_moon.image_angle &gt;= angle) {
     // Becoming Night
     global.alpha = (obj_sun_moon.image_angle-30)/(50-angle);
