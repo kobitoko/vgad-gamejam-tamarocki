@@ -52,11 +52,12 @@
     <object>objects\obj_controller</object>
     <object>objects\obj_button_feed</object>
     <object>objects\obj_button_chieves</object>
-    <object>objects\obj_sun_moon</object>
     <object>objects\obj_candy</object>
+    <object>objects\obj_sun_moon</object>
     <object>objects\obj_ui_season</object>
     <object>objects\obj_nightsky</object>
     <object>objects\obj_highcontrol</object>
+    <object>objects\obj_particles_snow</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>
