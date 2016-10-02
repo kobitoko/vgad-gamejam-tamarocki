@@ -19,6 +19,10 @@ globalvar moonClicks;
 globalvar sunClickedToday;
 globalvar moonClickedToday;
 
+for(var i = 0; i < 8; i++){
+    achievementsUnlocked[i] = false;
+}
+
 global.textDialogs = ds_queue_create();
 global.daynight = true;
 global.day = 0;
