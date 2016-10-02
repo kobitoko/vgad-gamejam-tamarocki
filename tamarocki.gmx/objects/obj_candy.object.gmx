@@ -121,7 +121,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>0.99</string>
+            <string>0.9</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -307,8 +307,8 @@
           <argument>
             <kind>1</kind>
             <string>if(not self.hitPlayed) {
-    audio_play_sound(snd_hit, 9,false);
     self.hitPlayed = true;
+    instance_create(self.x, self.y, obj_hitfx);
 }
 self.image_angle -= 25
 </string>
@@ -427,7 +427,7 @@ self.image_angle -= 25
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (choose(1,2) == 1)
+            <string>if (random_range(0, 2) &gt;= 1)
     path_mirror(path_throw);
 </string>
           </argument>
