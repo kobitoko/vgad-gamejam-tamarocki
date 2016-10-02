@@ -15,6 +15,7 @@
     <sprite>sprites\spr_sun_moon</sprite>
     <sprite>sprites\spr_darkness</sprite>
     <sprite>sprites\spr_candy</sprite>
+    <sprite>sprites\spr_title</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grass</background>
