@@ -67,8 +67,8 @@
     <object>objects\obj_subtitle</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room1</room>
     <room>rooms\room_title</room>
+    <room>rooms\room1</room>
     <room>rooms\room_highscore</room>
   </rooms>
   <help>
