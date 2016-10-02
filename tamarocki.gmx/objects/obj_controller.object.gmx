@@ -232,6 +232,8 @@ draw_set_font(global.mainfont);
           <argument>
             <kind>1</kind>
             <string>//draw_text(10, 10, obj_sun_moon.image_angle);
+draw_text(50, 10, global.sunClicks);
+draw_text(100, 40, global.moonClicks);
 flag = phy_debug_render_aabb | phy_debug_render_shapes | phy_debug_render_core_shapes | phy_debug_render_collision_pairs | phy_debug_render_obb;
 //physics_world_draw_debug(flag);
 
@@ -243,12 +245,14 @@ if (global.daynight == true and obj_sun_moon.image_angle &gt;= angle) {
 } else if (global.daynight == false and obj_sun_moon.image_angle &lt;= angle){
     //Night
     draw_sprite_ext(spr_darkness, 0, 0, 0, 1, 1, 0, c_white, 1);
+    global.sunClickedToday = false;
 } else if (global.daynight == false and obj_sun_moon.image_angle &gt;= angle) {
     //Becoming Day
     global.alpha = 1 - ((obj_sun_moon.image_angle-angle)/(50-angle));
     draw_sprite_ext(spr_darkness, 0, 0, 0, 1, 1, 0, c_white, global.alpha);
 } else if (global.daynight == true) {
     global.alpha = 0;
+    global.moonClickedToday = false;
 }
 
 var season = global.day div 3;
