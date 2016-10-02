@@ -64,11 +64,15 @@
     <object>objects\obj_hitfx</object>
     <object>objects\obj_title</object>
     <object>objects\obj_subtitle</object>
+    <object>objects\obj_threat</object>
     <object>objects\OBJ_FAKE</object>
     <object>objects\eff_fadetoblack</object>
+    <object>objects\eff_fadein</object>
+    <object>objects\obj_commandPrompt</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_title</room>
+    <room>rooms\room_dark</room>
     <room>rooms\room1</room>
     <room>rooms\room_highscore</room>
   </rooms>

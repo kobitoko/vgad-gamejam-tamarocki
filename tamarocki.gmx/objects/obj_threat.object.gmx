@@ -76,7 +76,6 @@
           <argument>
             <kind>1</kind>
             <string>if (device_mouse_check_button_pressed(0, mb_left)) {
-    obj_rock.curr_state = 1;
     self.left_click = 1;
     time = current_time;
 }
@@ -195,7 +194,8 @@
           <argument>
             <kind>1</kind>
             <string>var eff;
-eff = instance_create(0, 0, eff_fadetoblack);
+eff = instance_create(0, 0, eff_fadein);
+name = keyboard_string;
 </string>
           </argument>
         </arguments>
@@ -233,7 +233,7 @@ eff = instance_create(0, 0, eff_fadetoblack);
           <argument>
             <kind>1</kind>
             <string>draw_set_font(font1);
-draw_set_colour(c_black);
+draw_set_colour(c_lime);
 
 var alpha = current_time % 2000;
 if (alpha &lt; 1000)
@@ -241,7 +241,7 @@ if (alpha &lt; 1000)
 else
     alpha = 1;
 draw_set_alpha(alpha);
-draw_text(self.x - (32+string_width("Click To Start"))/2, self.y, "Click To Start");
+draw_text(self.x - (32+string_width("Click To Begin Your Adventure"))/2, self.y, "Click To Begin Your Adventure");
 draw_set_alpha(1);
 </string>
           </argument>

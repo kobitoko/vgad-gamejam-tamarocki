@@ -53,7 +53,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>10</string>
+            <string>2</string>
           </argument>
         </arguments>
       </action>
@@ -183,7 +183,7 @@ fadeAlpha += 0.05;
         <arguments>
           <argument>
             <kind>11</kind>
-            <room>room1</room>
+            <room>room_dark</room>
           </argument>
         </arguments>
       </action>

@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-80</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,11 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>left_click</string>
+            <string>fadeAlpha</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>0</string>
+            <string>1.0</string>
           </argument>
         </arguments>
       </action>
@@ -49,16 +49,40 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>fading</string>
+            <string>fadeSpeed</string>
           </argument>
           <argument>
             <kind>0</kind>
+            <string>2</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>301</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_alarm</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>fadeSpeed</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
             <string>0</string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="2">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -75,11 +99,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (device_mouse_check_button_pressed(0, mb_left)) {
-    obj_rock.curr_state = 1;
-    self.left_click = 1;
-    time = current_time;
-}
+            <string>alarm[0] = fadeSpeed;
+fadeAlpha += 0.05;
 </string>
           </argument>
         </arguments>
@@ -100,43 +121,15 @@
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>left_click</string>
+            <string>fadeAlpha</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>1</string>
+            <string>0.0</string>
           </argument>
           <argument>
             <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>612</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if_variable</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>fading</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
+            <string>3</string>
           </argument>
         </arguments>
       </action>
@@ -156,25 +149,21 @@
       </action>
       <action>
         <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
+        <id>224</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_another_room</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>fading</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>1</string>
+            <kind>11</kind>
+            <room>room1</room>
           </argument>
         </arguments>
       </action>
@@ -194,8 +183,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var eff;
-eff = instance_create(0, 0, eff_fadetoblack);
+            <string>instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -215,7 +203,7 @@ eff = instance_create(0, 0, eff_fadetoblack);
         <isnot>0</isnot>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -232,17 +220,9 @@ eff = instance_create(0, 0, eff_fadetoblack);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_font(font1);
-draw_set_colour(c_black);
-
-var alpha = current_time % 2000;
-if (alpha &lt; 1000)
-    alpha = alpha / 999;
-else
-    alpha = 1;
-draw_set_alpha(alpha);
-draw_text(self.x - (32+string_width("Click To Start"))/2, self.y, "Click To Start");
-draw_set_alpha(1);
+            <string>draw_set_alpha(fadeAlpha);
+draw_rectangle_color(-1, 0, room_width, room_height, c_black, c_black, c_black, c_black, false);
+draw_set_alpha(1.0);
 </string>
           </argument>
         </arguments>
