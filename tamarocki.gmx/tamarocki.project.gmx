@@ -45,7 +45,6 @@
     <script>scripts\scr_text.gml</script>
     <script>scripts\scr_init.gml</script>
     <script>scripts\scr_dialogue.gml</script>
-    <script>scripts\scr_title_click.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font1</font>
@@ -65,6 +64,7 @@
     <object>objects\obj_hitfx</object>
     <object>objects\obj_title</object>
     <object>objects\obj_subtitle</object>
+    <object>objects\OBJ_FAKE</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_title</room>
