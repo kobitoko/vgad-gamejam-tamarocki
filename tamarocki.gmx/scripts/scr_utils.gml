@@ -25,8 +25,8 @@ if (device_mouse_check_button_released(device, mb_left)) {
         obj_button_feed, true, false);
     if (colliders == obj_button_feed.id) {
         //script_execute(scr_text ,"Thanks for the food...", obj_rock.x, obj_rock.y, 1);
-        if(not object_exists(obj_candy)) {
-            instance_create(device_mouse_x(device), device_mouse_y(device), obj_candy);
+        if(instance_number(obj_candy) <= 0) {
+            instance_create(room_width*0.5, room_height*0.9, obj_candy);
         }
     }
 }

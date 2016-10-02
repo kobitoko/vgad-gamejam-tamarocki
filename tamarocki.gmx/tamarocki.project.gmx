@@ -24,7 +24,7 @@
     <sprite>sprites\spr_title</sprite>
     <sprite>sprites\spr_outline_candy</sprite>
     <sprite>sprites\spr_outline_trophy</sprite>
-    <sprite>sprites\spr_ui_season</sprite>
+    <sprite>sprites\spr_physblock</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grass</background>
@@ -50,7 +50,8 @@
     <object>objects\obj_button_chieves</object>
     <object>objects\obj_sun_moon</object>
     <object>objects\obj_candy</object>
-    <object>objects\obj_ui_season</object>
+    <object>objects\obj_block</object>
+    <object>objects\obj_block_dyn</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>
