@@ -12,17 +12,20 @@ if (device_mouse_check_button_pressed(device, mb_left)) {
 }
 if (device_mouse_check_button(device, mb_left)) {
     var colliders = collision_point(device_mouse_x(device), device_mouse_y(device),
-        obj_button, true, false);
-    if (colliders == obj_button.id) {
-        obj_button.image_index = 1;
+        obj_button_feed, true, false);
+    if (colliders == obj_button_feed.id) {
+        obj_button_feed.image_index = 1;
     }
 }
 if (device_mouse_check_button_released(device, mb_left)) {
-    obj_button.image_index = 0;
+    obj_button_feed.image_index = 0;
     var colliders = collision_point(device_mouse_x(device), device_mouse_y(device),
-        obj_button, true, false);
-    if (colliders == obj_button.id) {
-        script_execute(scr_text ,"Thanks for the food...", obj_rock.x, obj_rock.y, 1);
+        obj_button_feed, true, false);
+    if (colliders == obj_button_feed.id) {
+        //script_execute(scr_text ,"Thanks for the food...", obj_rock.x, obj_rock.y, 1);
+        if(not object_exists(obj_candy)) {
+            instance_create(device_mouse_x(device), device_mouse_y(device), obj_candy);
+        }
     }
 }
 
