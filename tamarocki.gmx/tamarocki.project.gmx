@@ -35,7 +35,9 @@
     <background>background\bg_bottom_lightgrass</background>
     <background>background\bg_bottom_fallleaves</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\path_throw</path>
+  </paths>
   <scripts name="scripts">
     <script>scripts\scr_utils.gml</script>
     <script>scripts\scr_text.gml</script>
@@ -53,11 +55,12 @@
     <object>objects\obj_sun_moon</object>
     <object>objects\obj_candy</object>
     <object>objects\obj_ui_season</object>
-    <object>objects\obj_block_dyn</object>
     <object>objects\obj_nightsky</object>
+    <object>objects\obj_highcontrol</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>
+    <room>rooms\room_highscore</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
