@@ -16,10 +16,15 @@ for (var i=0; i<queueSize; i+=4) {
     var yVal = ds_queue_dequeue(global.textDialogs);
     var alpha = ds_queue_dequeue(global.textDialogs);
     // draw text
+    if (global.daynight == true) {
+        draw_set_colour(c_black);
+    } else {
+        draw_set_colour(c_white);
+    }
     draw_set_font(font1);
-    draw_set_alpha(alpha)
-    draw_text_ext(xVal, yVal, str, 20, room_width - xVal - 50);
-    draw_set_font(global.mainfont)
+    draw_set_alpha(alpha);
+    draw_text_ext(xVal - (room_width - xVal - 50)/2, yVal, str, 20, room_width - xVal - 50);
+    draw_set_font(global.mainfont);
     // reset alpha
     draw_set_alpha(1.0)
     // Do not requeue if alpha is equal or lower than the fadeSpd.

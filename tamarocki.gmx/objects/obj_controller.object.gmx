@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -247,26 +247,46 @@
             <kind>1</kind>
             <string>var angle = 30;
 d3d_set_depth(-10);
+            <string>//draw_text(10, 10, obj_sun_moon.image_angle);
+
+var angle = 30;
+
 if (global.daynight == true and obj_sun_moon.image_angle &gt;= angle) {
     // Becoming Night
-    var alpha = (obj_sun_moon.image_angle-30)/(50-angle);
-    
-    //background_visible[2] = true;
-    background_alpha[2] = alpha;
-    
-    draw_sprite_ext(spr_darkness, 0, 0, 0, 1, 1, 0, c_white, alpha);
+    global.alpha = (obj_sun_moon.image_angle-30)/(50-angle);
+    draw_sprite_ext(spr_darkness, 0, 0, 0, 1, 1, 0, c_white, global.alpha);
 } else if (global.daynight == false and obj_sun_moon.image_angle &lt;= angle){
     //Night
-    background_alpha[2] = 1;
     draw_sprite_ext(spr_darkness, 0, 0, 0, 1, 1, 0, c_white, 1);
 } else if (global.daynight == false and obj_sun_moon.image_angle &gt;= angle) {
     //Becoming Day
-    var alpha = 1 - ((obj_sun_moon.image_angle-angle)/(50-angle));
-    background_alpha[2] = alpha;
-    
-    draw_sprite_ext(spr_darkness, 0, 0, 0, 1, 1, 0, c_white, alpha);
+    global.alpha = 1 - ((obj_sun_moon.image_angle-angle)/(50-angle));
+    draw_sprite_ext(spr_darkness, 0, 0, 0, 1, 1, 0, c_white, global.alpha);
 } else if (global.daynight == true) {
-    background_alpha[2] = 0;
+    global.alpha = 0;
+}
+
+var season = global.day div 3;
+if (season == 0) {
+    //background_visible[0] = true;
+    background_visible[2] = false;
+    background_visible[3] = false;
+    background_visible[4] = false;
+} else if (season == 1) {
+    //background_visible[0] = false;
+    background_visible[2] = true;
+    background_visible[3] = false;
+    background_visible[4] = false;
+} else if (season == 2) {
+    //background_visible[0] = false;
+    background_visible[2] = false;
+    background_visible[3] = true;
+    background_visible[4] = false;
+} else if (season == 3) {
+    //background_visible[0] = false;
+    background_visible[2] = false;
+    background_visible[3] = false;
+    background_visible[4] = true;
 }
 </string>
           </argument>
