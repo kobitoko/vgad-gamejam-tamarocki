@@ -14,6 +14,7 @@
     <sound>sound\snd_newday</sound>
     <sound>sound\snd_newnight</sound>
     <sound>sound\snd_hit</sound>
+    <sound>sound\snd_trophy</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_rock</sprite>
@@ -73,7 +74,7 @@
   <rooms name="rooms">
     <room>rooms\room_title</room>
     <room>rooms\room_dark</room>
-    <room>rooms\room1</room>
+    <room>rooms\room_main</room>
     <room>rooms\room_highscore</room>
   </rooms>
   <help>

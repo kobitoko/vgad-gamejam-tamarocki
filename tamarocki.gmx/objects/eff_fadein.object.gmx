@@ -97,7 +97,7 @@
         <arguments>
           <argument>
             <kind>11</kind>
-            <room>room1</room>
+            <room>room_main</room>
           </argument>
         </arguments>
       </action>
