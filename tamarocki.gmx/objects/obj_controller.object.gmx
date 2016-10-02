@@ -224,6 +224,8 @@
           <argument>
             <kind>1</kind>
             <string>//draw_text(10, 10, obj_sun_moon.image_angle);
+if(instance_number(obj_candy)&gt;0)
+    draw_text(20, 20, obj_candy.phy_active);
 
 var angle = 30;
 d3d_set_depth(-10);

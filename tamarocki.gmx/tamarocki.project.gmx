@@ -52,7 +52,6 @@
     <object>objects\obj_sun_moon</object>
     <object>objects\obj_candy</object>
     <object>objects\obj_block</object>
-    <object>objects\obj_block_dyn</object>
     <object>objects\obj_ui_season</object>
   </objects>
   <rooms name="rooms">
