@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>6</kind>
-            <sound>snd_button</sound>
+            <sound>snd_click</sound>
           </argument>
           <argument>
             <kind>3</kind>

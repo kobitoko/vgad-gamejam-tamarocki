@@ -65,7 +65,7 @@
         <arguments>
           <argument>
             <kind>6</kind>
-            <sound>-100</sound>
+            <sound>snd_daytime</sound>
           </argument>
         </arguments>
       </action>
@@ -99,7 +99,7 @@
         <arguments>
           <argument>
             <kind>6</kind>
-            <sound>-100</sound>
+            <sound>snd_daytime</sound>
           </argument>
           <argument>
             <kind>3</kind>
