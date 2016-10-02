@@ -9,6 +9,7 @@ if (device_mouse_check_button_pressed(device, mb_left)) {
         obj_rock, true, false);
     if (colliders == obj_rock.id) {
         script_execute(scr_dialogue);
+        global.rockClicks++;
     }
 }
 //BUTTON FOR FEEDING
