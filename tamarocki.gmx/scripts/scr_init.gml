@@ -8,7 +8,6 @@ globalvar mainfont;
 globalvar seasons;
 globalvar dialogueClick;
 globalvar alpha;
-globalvar time;
 
 //Achievement tracking variables
 globalvar achievementsUnlocked;
@@ -34,8 +33,6 @@ global.sunClicks = 0;
 global.moonClicks = 0;
 global.sunClickedToday = false;
 global.moonClickedToday = false;
-
-for(var i = 0; i <= 5; i++){
 
 global.dialogueClick[0] = "This is off to a rocky start...";
 global.dialogueClick[1] = "Sometimes I feel like I take time for granite...";
@@ -63,4 +60,5 @@ global.seasons[2] = "Winter";
 global.seasons[3] = "Spring";
 
 global.alpha = 0;
+
 global.time = current_time;
