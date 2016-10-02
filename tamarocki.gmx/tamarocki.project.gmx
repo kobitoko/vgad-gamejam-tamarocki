@@ -65,6 +65,7 @@
     <object>objects\obj_title</object>
     <object>objects\obj_subtitle</object>
     <object>objects\OBJ_FAKE</object>
+    <object>objects\eff_fadetoblack</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_title</room>
