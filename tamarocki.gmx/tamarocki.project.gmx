@@ -26,12 +26,12 @@
     <sprite>sprites\spr_outline_trophy</sprite>
     <sprite>sprites\spr_physblock</sprite>
     <sprite>sprites\spr_ui_season</sprite>
+    <sprite>sprites\spr_nightsky</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grass</background>
     <background>background\bg_bottom_grass</background>
     <background>background\bg_bottom_snow</background>
-    <background>background\bg_top_night</background>
     <background>background\bg_top_day</background>
   </backgrounds>
   <paths name="paths"/>
@@ -51,9 +51,9 @@
     <object>objects\obj_button_chieves</object>
     <object>objects\obj_sun_moon</object>
     <object>objects\obj_candy</object>
-    <object>objects\obj_block</object>
-    <object>objects\obj_block_dyn</object>
     <object>objects\obj_ui_season</object>
+    <object>objects\obj_block_dyn</object>
+    <object>objects\obj_nightsky</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>

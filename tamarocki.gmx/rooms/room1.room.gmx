@@ -33,8 +33,8 @@
   <backgrounds>
     <background visible="-1" foreground="0" name="bg_bottom_grass" x="0" y="0" htiled="0" vtiled="0" hspeed="0" vspeed="0" stretch="-1"/>
     <background visible="-1" foreground="0" name="bg_top_day" x="0" y="0" htiled="0" vtiled="0" hspeed="0" vspeed="0" stretch="-1"/>
-    <background visible="0" foreground="0" name="bg_top_night" x="0" y="0" htiled="0" vtiled="0" hspeed="0" vspeed="0" stretch="-1"/>
     <background visible="0" foreground="0" name="bg_bottom_snow" x="0" y="0" htiled="0" vtiled="0" hspeed="0" vspeed="0" stretch="-1"/>
+    <background visible="0" foreground="0" name="" x="0" y="0" htiled="0" vtiled="0" hspeed="0" vspeed="0" stretch="-1"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -56,7 +56,8 @@
     <instance objName="obj_button_feed" x="64" y="64" name="inst_3A4C142A" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="obj_sun_moon" x="320" y="672" name="inst_B24C5DDA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_button_chieves" x="64" y="160" name="inst_58201065" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ui_season" x="639" y="0" name="inst_3FD8D395" locked="0" code="" scaleX="1.0971428155899" scaleY="1.39130437374115" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nightsky" x="0" y="0" name="inst_6E24234D" locked="0" code="" scaleX="1" scaleY="1.25" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ui_season" x="640" y="0" name="inst_E3F4D5E7" locked="0" code="" scaleX="1.09090912342072" scaleY="1.39130437374115" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
