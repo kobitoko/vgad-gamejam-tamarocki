@@ -263,7 +263,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(10, 10, obj_sun_moon.image_angle);
+            <string>//draw_text(10, 10, obj_sun_moon.image_angle);
 
 var angle = 30;
 d3d_set_depth(-10);
