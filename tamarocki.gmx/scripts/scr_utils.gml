@@ -47,7 +47,24 @@ if (device_mouse_check_button_released(device, mb_left)) {
         
     }
 }
-
+//SUN & MOON
+if (device_mouse_check_button_pressed(device, mb_left)) {
+    var colliders = collision_point(device_mouse_x(device), device_mouse_y(device),
+        obj_sun_moon, true, false);
+    if (colliders == obj_sun_moon.id) {
+        if(global.daynight == true){
+            if(global.sunClickedToday == false){
+                global.sunClicks++;
+                global.sunClickedToday = true;
+            }
+        }else{
+            if(global.moonClickedToday == false){
+               global.moonClicks++;
+               global.moonClickedToday = true;
+            }
+        }
+    }
+}
 
 #define scr_playBgm
 // Argument0 has to be a sound object

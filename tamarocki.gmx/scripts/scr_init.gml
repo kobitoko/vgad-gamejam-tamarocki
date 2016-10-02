@@ -17,6 +17,8 @@ globalvar achieveClicks;
 globalvar rockClicks;
 globalvar sunClicks;
 globalvar moonClicks;
+globalvar sunClickedToday;
+globalvar moonClickedToday;
 
 global.textDialogs = ds_queue_create();
 global.daynight = true;
@@ -31,6 +33,8 @@ global.achieveClicks = 0;
 global.rockClicks = 0;
 global.sunClicks = 0;
 global.moonClicks = 0;
+global.sunClickedToday = false;
+global.moonClickedToday = false;
 
 global.dialogueClick[0] = "This is off to a rocky start...";
 global.dialogueClick[1] = "Sometimes I feel like I take time for granite...";
