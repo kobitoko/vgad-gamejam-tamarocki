@@ -31,7 +31,7 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="3" enumb="2">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -48,10 +48,28 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// 1.5 degrees per sec per framerate
+            <string>
+// 2 minutes to traverse 100 degrees
+// 1 minute = 60 seconds
+// 1 second = 1000 milliseconds
+// 2*60*1000 = 120 000 milliseconds for 100 degrees
+// 120 000 / 100 = 1 200 milliseconds for 1 degree
+// or 12 ms for 0.01 degrees
+/*if (current_time - time &gt;= 12) {
+    self.image_angle += 0.01;
+    time += 12;
+}*/
+// 41.5 seconds (length of "OMG Everything is Wheat.ogg")
+// 41.5*1000/100 = 415 ms / degree
+if (current_time - time &gt;= 83) {
+    self.image_angle += 0.2;
+    time += 83;
+}
+
+// 1.5 degrees per sec per framerate
 //self.image_angle +=1.5/30;
 // Debug speed
-self.image_angle += 0.5;
+//self.image_angle += 0.5;
 
 if (self.image_angle &gt;= 50) {
     self.image_angle -= 100;

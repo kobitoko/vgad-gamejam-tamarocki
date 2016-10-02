@@ -8,6 +8,7 @@ globalvar mainfont;
 globalvar seasons;
 globalvar dialogueClick;
 globalvar alpha;
+globalvar time;
 
 
 global.textDialogs = ds_queue_create();
@@ -27,3 +28,4 @@ global.seasons[2] = "Winter";
 global.seasons[3] = "Spring";
 
 global.alpha = 0;
+global.time = current_time;
