@@ -9,6 +9,7 @@ globalvar seasons;
 globalvar dialogueClick;
 globalvar alpha;
 globalvar time;
+globalvar name;
 
 
 global.textDialogs = ds_queue_create();
@@ -17,6 +18,7 @@ global.day = 0;
 global.food = 0;
 global.currentMusic = snd_daytime;
 global.mainfont = font1;
+global.name = "Rocki";
 
 global.dialogueClick[0] = "This is off to a rocky start...";
 global.dialogueClick[1] = "Sometimes I feel like I take time for granite...";

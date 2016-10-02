@@ -27,6 +27,7 @@
     <sprite>sprites\spr_physblock</sprite>
     <sprite>sprites\spr_ui_season</sprite>
     <sprite>sprites\spr_nightsky</sprite>
+    <sprite>sprites\spr_hitfx</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_bottom_grass</background>
@@ -35,7 +36,9 @@
     <background>background\bg_bottom_lightgrass</background>
     <background>background\bg_bottom_fallleaves</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\path_throw</path>
+  </paths>
   <scripts name="scripts">
     <script>scripts\scr_utils.gml</script>
     <script>scripts\scr_text.gml</script>
@@ -50,14 +53,17 @@
     <object>objects\obj_controller</object>
     <object>objects\obj_button_feed</object>
     <object>objects\obj_button_chieves</object>
-    <object>objects\obj_sun_moon</object>
     <object>objects\obj_candy</object>
+    <object>objects\obj_sun_moon</object>
     <object>objects\obj_ui_season</object>
-    <object>objects\obj_block_dyn</object>
     <object>objects\obj_nightsky</object>
+    <object>objects\obj_highcontrol</object>
+    <object>objects\obj_particles_snow</object>
+    <object>objects\obj_hitfx</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>
+    <room>rooms\room_highscore</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

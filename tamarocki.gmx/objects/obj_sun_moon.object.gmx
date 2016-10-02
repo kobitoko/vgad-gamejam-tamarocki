@@ -65,12 +65,12 @@ if (current_time - time &gt;= 83) {
     self.image_angle += 0.2;
     time += 83;
 }
-
-// 1.5 degrees per sec per framerate
-//self.image_angle +=1.5/30;
-// Debug speed
-//self.image_angle += 0.5;
-
+// Debug fast
+/*if (current_time - time &gt;= 10) {
+    self.image_angle += 1;
+    time += 10;
+}
+*/
 if (self.image_angle &gt;= 50) {
     self.image_angle -= 100;
     if(global.daynight) {
