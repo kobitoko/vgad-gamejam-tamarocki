@@ -56,11 +56,17 @@ if (device_mouse_check_button_pressed(device, mb_left)) {
             if(global.sunClickedToday == false){
                 global.sunClicks++;
                 global.sunClickedToday = true;
+                if(global.sunClicks >= 10){
+                    global.achievementsUnlocked[0] = true;
+                }
             }
         }else{
             if(global.moonClickedToday == false){
-               global.moonClicks++;
-               global.moonClickedToday = true;
+                global.moonClicks++;
+                global.moonClickedToday = true;
+                if(global.moonClicks >= 10){
+                    global.achievementsUnlocked[1] = true;
+                }
             }
         }
     }
