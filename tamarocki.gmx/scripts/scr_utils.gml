@@ -8,8 +8,8 @@ if (device_mouse_check_button_pressed(device, mb_left)) {
     var colliders = collision_point(device_mouse_x(device), device_mouse_y(device),
         obj_rock, true, false);
     if (colliders == obj_rock.id) {
-        script_execute(scr_dialogue);
         global.rockClicks++;
+        script_execute(scr_dialogue);
     }
 }
 //BUTTON FOR FEEDING
