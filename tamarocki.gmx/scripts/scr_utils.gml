@@ -9,6 +9,9 @@ if (device_mouse_check_button_pressed(device, mb_left)) {
         obj_rock, true, false);
     if (colliders == obj_rock.id) {
         global.rockClicks++;
+        if(global.rockClicks >= 100){
+            achievementsUnlocked[3] = true;
+        }
         script_execute(scr_dialogue);
     }
 }
@@ -27,6 +30,9 @@ if (device_mouse_check_button_released(device, mb_left)) {
     if (colliders == obj_button_feed.id) {
         //script_execute(scr_text ,"Thanks for the food...", obj_rock.x, obj_rock.y, 1);
         if(instance_number(obj_candy) <= 0) {
+            if(global.feedClicks >= 100){
+                achievementsUnlocked[2] = true;
+            }
             instance_create(room_width*0.5, room_height*0.9, obj_candy);
         }
     }
