@@ -7,7 +7,7 @@ if (device_mouse_check_button_pressed(device, mb_left)) {
     var colliders = collision_point(device_mouse_x(device), device_mouse_y(device),
         obj_rock, true, false);
     if (colliders == obj_rock.id) {
-        script_execute(scr_text ,"Hello there~!", obj_rock.x, obj_rock.y, 1);
+        script_execute(scr_dialogue);
     }
 }
 if (device_mouse_check_button(device, mb_left)) {
