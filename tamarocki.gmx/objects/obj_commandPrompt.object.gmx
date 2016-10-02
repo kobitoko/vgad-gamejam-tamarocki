@@ -53,7 +53,7 @@
             <kind>1</kind>
             <string>draw_set_colour(c_lime);
 draw_set_font(font1);
-draw_text(self.x, self.y, "Name: "+keyboard_string);
+draw_text(self.x - (32+string_width("Name: "+keyboard_string))/2, self.y, "Name: "+keyboard_string);
 </string>
           </argument>
         </arguments>

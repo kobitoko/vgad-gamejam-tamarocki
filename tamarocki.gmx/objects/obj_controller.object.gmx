@@ -65,7 +65,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>msg = get_string_async("Your pet rock's name:","Rocki");
+            <string>//msg = get_string_async("Your pet rock's name:","Rocki");
 </string>
           </argument>
         </arguments>
@@ -130,7 +130,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var identity = ds_map_find_value(async_load, "id");
+            <string>/*var identity = ds_map_find_value(async_load, "id");
 if (not is_undefined(identity) and identity == msg) {
    if (ds_map_find_value(async_load, "status")) {
       if (ds_map_find_value(async_load, "result") != "") {
@@ -141,7 +141,7 @@ if (not is_undefined(identity) and identity == msg) {
       }
    }
 }
-
+*/
 </string>
           </argument>
         </arguments>
