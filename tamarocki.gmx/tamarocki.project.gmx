@@ -8,6 +8,12 @@
     <sound>sound\snd_daytime</sound>
     <sound>sound\snd_night</sound>
     <sound>sound\snd_credits</sound>
+    <sound>sound\snd_click</sound>
+    <sound>sound\snd_button</sound>
+    <sound>sound\snd_fall</sound>
+    <sound>sound\snd_newday</sound>
+    <sound>sound\snd_newnight</sound>
+    <sound>sound\snd_hit</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_rock</sprite>
