@@ -53,7 +53,6 @@
     <object>objects\obj_block</object>
     <object>objects\obj_block_dyn</object>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\room1</room>
   </rooms>

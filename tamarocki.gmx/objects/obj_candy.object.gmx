@@ -49,7 +49,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>physics_apply_force(self.x, self.y, 0, -100);
+            <string>//physics_apply_force(self.x, self.y, 0, -100);
 </string>
           </argument>
         </arguments>
