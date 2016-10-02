@@ -68,6 +68,9 @@ if (self.image_angle &gt;= 50) {
         global.daynight = true;
         self.image_index = 0;
         
+        //Count up a day on the in-game calendar
+        global.day++;
+        
         //Rooster
         audio_play_sound(snd_newday, 10, false);
         
@@ -75,6 +78,7 @@ if (self.image_angle &gt;= 50) {
         script_execute(scr_playBgm, snd_daytime);
     }
 }
+
 </string>
           </argument>
         </arguments>

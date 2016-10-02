@@ -1,7 +1,7 @@
 var i = irandom(array_length_1d(global.dialogueClick) - 1);
 var dialogueOfSeason = global.dialogueClick;
 var j;
-switch(global.day div 3)
+switch((global.day - 1) div 3)
 {
     case 0:
         dialogueOfSeason = global.dialogueSummer;
@@ -30,4 +30,15 @@ var currentDialogue = global.dialogueClick[i];
 if(irandom(1)){
     currentDialogue = dialogueOfSeason[j];
 }
+if(global.rockClicks==98){
+    currentDialogue = "Rocki feels strong...";
+}
+if(global.rockClicks==99){
+    currentDialogue = "Rocki feels changed...";
+}
+if(global.rockClicks==100){
+    currentDialogue = "Rocki feels TOUGH!";
+    //Achievement unlocked~!~
+}
+
 script_execute(scr_text , currentDialogue, obj_rock.x, obj_rock.y, 1);

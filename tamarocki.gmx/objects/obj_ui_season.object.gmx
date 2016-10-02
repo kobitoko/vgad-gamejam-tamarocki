@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//Season: 0 = summer, 1 = fall, 2 = winter, 3 = spring, 4 IS DEATH
-var season = global.day div 3;
+var season = (global.day - 1) div 3;
 //Day: 3 days per season
 var dateday = global.day % 3;
 
