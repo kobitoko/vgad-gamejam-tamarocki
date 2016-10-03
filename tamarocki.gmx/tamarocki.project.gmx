@@ -30,6 +30,8 @@
     <sprite>sprites\spr_ui_season</sprite>
     <sprite>sprites\spr_nightsky</sprite>
     <sprite>sprites\spr_hitfx</sprite>
+    <sprite>sprites\sprite_achieveSun</sprite>
+    <sprite>sprites\sprite_achieveMoon</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_bottom_grass</background>
@@ -47,6 +49,7 @@
     <script>scripts\scr_text.gml</script>
     <script>scripts\scr_init.gml</script>
     <script>scripts\scr_dialogue.gml</script>
+    <script>scripts\scr_switch_rock.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font1</font>
@@ -69,6 +72,8 @@
     <object>objects\obj_threat</object>
     <object>objects\OBJ_FAKE</object>
     <object>objects\eff_fadetoblack</object>
+    <object>objects\obj_rock_falling</object>
+    <object>objects\obj_rock_dummy</object>
     <object>objects\eff_fadein</object>
     <object>objects\obj_commandPrompt</object>
     <object>objects\obj_text_sun</object>
@@ -79,6 +84,7 @@
     <object>objects\obj_text_invisible</object>
     <object>objects\obj_text_snow</object>
     <object>objects\obj_text_real</object>
+    <object>objects\obj_achievement_sun</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_title</room>
