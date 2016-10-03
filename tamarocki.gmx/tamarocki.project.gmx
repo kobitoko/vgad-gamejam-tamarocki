@@ -71,6 +71,14 @@
     <object>objects\eff_fadetoblack</object>
     <object>objects\eff_fadein</object>
     <object>objects\obj_commandPrompt</object>
+    <object>objects\obj_text_sun</object>
+    <object>objects\obj_text_rich</object>
+    <object>objects\obj_text_chipped</object>
+    <object>objects\obj_text_moon</object>
+    <object>objects\obj_text_cube</object>
+    <object>objects\obj_text_invisible</object>
+    <object>objects\obj_text_snow</object>
+    <object>objects\obj_text_real</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_title</room>
