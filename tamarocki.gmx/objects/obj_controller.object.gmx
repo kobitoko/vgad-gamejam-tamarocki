@@ -238,6 +238,7 @@ flag = phy_debug_render_aabb | phy_debug_render_shapes | phy_debug_render_core_s
 //physics_world_draw_debug(flag);
 
 var angle = 30;
+if (instance_exists(obj_sun_moon))
 if (global.daynight == true and obj_sun_moon.image_angle &gt;= angle) {
     // Becoming Night
     global.alpha = (obj_sun_moon.image_angle-30)/(50-angle);

@@ -4,7 +4,7 @@
 #define scr_click
 var device = 0;
 //ROCK
-if (device_mouse_check_button_pressed(device, mb_left)) {
+if (instance_exists(obj_rock) and device_mouse_check_button_pressed(device, mb_left)) {
     var colliders = collision_point(device_mouse_x(device), device_mouse_y(device),
         obj_rock, true, false);
     if (colliders == obj_rock.id) {
@@ -23,7 +23,7 @@ if (device_mouse_check_button(device, mb_left)) {
         obj_button_feed.image_index = 1;
     }
 }
-if (device_mouse_check_button_released(device, mb_left)) {
+if (instance_exists(obj_button_feed) and device_mouse_check_button_released(device, mb_left)) {
     obj_button_feed.image_index = 0;
     var colliders = collision_point(device_mouse_x(device), device_mouse_y(device),
         obj_button_feed, true, false);
@@ -38,7 +38,7 @@ if (device_mouse_check_button_released(device, mb_left)) {
     }
 }
 // BUTTON FOR ACHIEVEMENTS
-if (device_mouse_check_button(device, mb_left)) {
+if (instance_exists(obj_button_chieves) and device_mouse_check_button(device, mb_left)) {
     var colliders = collision_point(device_mouse_x(device), device_mouse_y(device),
         obj_button_chieves, true, false);
     if (colliders == obj_button_chieves.id) {
@@ -46,7 +46,7 @@ if (device_mouse_check_button(device, mb_left)) {
     }
 }
 //SUN & MOON
-if (device_mouse_check_button_pressed(device, mb_left)) {
+if (instance_exists(obj_sun_moon) and device_mouse_check_button_pressed(device, mb_left)) {
     var colliders = collision_point(device_mouse_x(device), device_mouse_y(device),
         obj_sun_moon, true, false);
     if (colliders == obj_sun_moon.id) {

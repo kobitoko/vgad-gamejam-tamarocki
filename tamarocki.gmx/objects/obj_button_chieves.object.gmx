@@ -98,7 +98,7 @@ if (not audio_is_playing(snd_trophy))
         <arguments>
           <argument>
             <kind>11</kind>
-            <room>-100</room>
+            <room>room_highscore</room>
           </argument>
         </arguments>
       </action>

@@ -3,7 +3,7 @@
   <spriteName>spr_rock</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-21</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,8 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>self.image_xscale = obj_rock.image_xscale
-self.image_yscale = obj_rock.image_yscale
+            <string>if (instance_exists(obj_rock)) {
+    self.image_xscale = obj_rock.image_xscale;
+    self.image_yscale = obj_rock.image_yscale;
+} else {
+    self.image_xscale = 1;
+    self.image_yscale = 1;
+}
 </string>
           </argument>
         </arguments>
@@ -445,8 +450,10 @@ self.image_yscale = obj_rock.image_yscale
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>obj_rock.image_index = self.image_index;
-obj_rock.rock_type = self.image_index;
+            <string>if (instance_exists(obj_rock)) {
+    obj_rock.image_index = self.image_index;
+    obj_rock.rock_type = self.image_index;
+}
 </string>
           </argument>
         </arguments>

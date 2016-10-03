@@ -251,7 +251,7 @@
         <arguments>
           <argument>
             <kind>8</kind>
-            <path>-100</path>
+            <path>path_rock_fall</path>
           </argument>
           <argument>
             <kind>0</kind>
