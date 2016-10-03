@@ -9,6 +9,9 @@ globalvar seasons;
 globalvar dialogueClick;
 globalvar alpha;
 
+globalvar rockType;
+globalvar createRock;
+
 //Achievement tracking variables
 globalvar achievementsUnlocked;
 globalvar feedClicks;
@@ -65,4 +68,6 @@ global.seasons[3] = "Spring";
 
 global.alpha = 0;
 
+global.createRock = false;
+global.rockType = 0;
 global.time = current_time;

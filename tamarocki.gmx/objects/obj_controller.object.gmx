@@ -256,6 +256,7 @@ if (global.daynight == true and obj_sun_moon.image_angle &gt;= angle) {
     global.moonClickedToday = false;
 }
 
+//Season Ground
 var season = global.day div 3;
 if (season == 0) {
     //background_visible[0] = true;
@@ -277,6 +278,12 @@ if (season == 0) {
     background_visible[2] = false;
     background_visible[3] = false;
     background_visible[4] = true;
+}
+
+//Rock Switching
+if (global.createRock) {
+    script_execute(scr_switch_rock, global.rockType);
+    global.createRock = false;
 }
 </string>
           </argument>

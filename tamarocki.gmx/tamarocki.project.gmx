@@ -58,7 +58,15 @@
     <object>objects\obj_controller</object>
     <object>objects\obj_rock</object>
     <object>objects\obj_button_feed</object>
-    <object>objects\obj_trophyicon</object>
+    <object>objects\obj_icon_sun</object>
+    <object>objects\obj_icon_moon</object>
+    <object>objects\obj_icon_rich</object>
+    <object>objects\obj_icon_chipped</object>
+    <object>objects\obj_icon_cube</object>
+    <object>objects\obj_icon_invisible</object>
+    <object>objects\obj_icon_snow</object>
+    <object>objects\obj_icon_real</object>
+    <object>objects\obj_button_exit</object>
     <object>objects\obj_button_chieves</object>
     <object>objects\obj_candy</object>
     <object>objects\obj_sun_moon</object>
