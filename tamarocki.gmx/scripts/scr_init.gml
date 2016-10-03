@@ -1,9 +1,7 @@
 // Variables global
 globalvar textDialogs;
-globalvar daynight;
 globalvar day;
 globalvar food;
-globalvar currentMusic;
 globalvar mainfont;
 globalvar seasons;
 globalvar dialogueClick;
@@ -31,10 +29,8 @@ for(var i = 0; i < 8; i++){
 }
 
 global.textDialogs = ds_queue_create();
-global.daynight = true;
 global.day = 0;
 global.food = 0;
-global.currentMusic = snd_daytime;
 global.mainfont = font1;
 
 global.achievementTitle = "Sun Rock";

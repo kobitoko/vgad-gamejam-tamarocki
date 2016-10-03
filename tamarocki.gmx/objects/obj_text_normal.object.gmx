@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,19 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>globalvar name;
-global.name = "";
-
-globalvar time;
-time = current_time;
-
-globalvar daynight;
-daynight = true;
-
-globalvar currentMusic;
-global.currentMusic = snd_daytime;
-
-
+            <string>draw_text(self.x - (string_width("NORMAL"))/2, self.y, "NORMAL");
 </string>
           </argument>
         </arguments>

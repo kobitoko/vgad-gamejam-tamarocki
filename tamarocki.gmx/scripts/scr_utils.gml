@@ -9,7 +9,7 @@ if (instance_exists(obj_rock) and device_mouse_check_button_pressed(device, mb_l
         obj_rock, true, false);
     if (colliders == obj_rock.id) {
         global.rockClicks++;
-        if(global.rockClicks >= 100){
+        if(global.rockClicks == 100){
             global.achievementTitle = "Cube Rock";
             global.achievementDesc = "Click on "+global.name+" 100 times.";
             instance_create(obj_rock.x, obj_rock.y+200, obj_ui_toast);
@@ -33,22 +33,14 @@ if (instance_exists(obj_button_feed) and device_mouse_check_button_released(devi
     if (colliders == obj_button_feed.id) {
         //script_execute(scr_text ,"Thanks for the food...", obj_rock.x, obj_rock.y, 1);
         if(instance_number(obj_candy) <= 0) {
-            if(global.feedClicks >= 100){
+            if(global.feedClicks == 20){
                 global.achievementTitle = "Chipped Rock";
-                global.achievementDesc = "Try to feed "+global.name+" 100 times.";
+                global.achievementDesc = "Try to feed "+global.name+" 20 times.";
                 instance_create(obj_rock.x, obj_rock.y+200, obj_ui_toast);
                 achievementsUnlocked[2] = true;
             }
             instance_create(room_width*0.5, room_height*0.9, obj_candy);
         }
-    }
-}
-// BUTTON FOR ACHIEVEMENTS
-if (instance_exists(obj_button_chieves) and device_mouse_check_button(device, mb_left)) {
-    var colliders = collision_point(device_mouse_x(device), device_mouse_y(device),
-        obj_button_chieves, true, false);
-    if (colliders == obj_button_chieves.id) {
-        obj_button_chieves.image_index = 1;
     }
 }
 //SUN & MOON
@@ -62,7 +54,7 @@ if (instance_exists(obj_sun_moon) and device_mouse_check_button_pressed(device, 
             if(global.sunClickedToday == false){
                 global.sunClicks++;
                 global.sunClickedToday = true;
-                if(global.sunClicks >= 10){
+                if(global.sunClicks == 10){
                     global.achievementTitle = "Sun Rock";
                     global.achievementDesc = "Click on the Sun on 10 separate days.";
                     instance_create(obj_rock.x, obj_rock.y+200, obj_ui_toast);
@@ -77,7 +69,7 @@ if (instance_exists(obj_sun_moon) and device_mouse_check_button_pressed(device, 
             if(global.moonClickedToday == false){
                 global.moonClicks++;
                 global.moonClickedToday = true;
-                if(global.moonClicks >= 10){
+                if(global.moonClicks == 10){
                     global.achievementTitle = "Moon Rock";
                     global.achievementDesc = "Click on the Moon on 10 separate days.";
                     instance_create(obj_rock.x, obj_rock.y+200, obj_ui_toast);
@@ -96,3 +88,11 @@ if (audio_is_playing(global.currentMusic))
 if (not audio_is_playing(argument0))
     global.currentMusic = argument0;
     audio_play_sound(argument0, 10, true);
+#define scr_playDayNightBgm
+if (global.daynight) {
+    if (not sound_isplaying(snd_daytime))
+        script_execute(scr_playBgm, snd_daytime);
+} else {
+    if (not sound_isplaying(snd_night))
+        script_execute(scr_playBgm, snd_night);
+}

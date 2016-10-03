@@ -76,7 +76,7 @@
           <argument>
             <kind>1</kind>
             <string>if (device_mouse_check_button_pressed(0, mb_left)) {
-    obj_rock.curr_state = 1;
+    //obj_rock.curr_state = 1;
     self.left_click = 1;
     time = current_time;
 }
