@@ -7,7 +7,6 @@ globalvar seasons;
 globalvar dialogueClick;
 globalvar alpha;
 
-globalvar rockType;
 globalvar createRock;
 
 //Achievement Toast Vars
@@ -25,8 +24,10 @@ globalvar sunClickedToday;
 globalvar moonClickedToday;
 
 for(var i = 0; i < 8; i++){
-    achievementsUnlocked[i] = false;
+    achievementsUnlocked[i] = false;//true;
 }
+//achievementsUnlocked[0] = true;//SUN
+//achievementsUnlocked[1] = true;//MOON
 
 global.textDialogs = ds_queue_create();
 global.day = 0;
@@ -72,5 +73,4 @@ global.seasons[3] = "Spring";
 global.alpha = 0;
 
 global.createRock = false;
-global.rockType = 0;
 global.time = current_time;

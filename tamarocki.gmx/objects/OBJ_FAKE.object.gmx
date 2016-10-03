@@ -37,7 +37,8 @@ daynight = true;
 globalvar currentMusic;
 global.currentMusic = snd_daytime;
 
-
+globalvar rockType;
+rockType = 0;
 </string>
           </argument>
         </arguments>

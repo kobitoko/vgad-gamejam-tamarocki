@@ -16,6 +16,22 @@
     <sound>sound\snd_hit</sound>
     <sound>sound\snd_trophy</sound>
     <sound>sound\snd_darkroom</sound>
+    <sound>sound\snd_sun_day</sound>
+    <sound>sound\snd_sun_night</sound>
+    <sound>sound\snd_moon_day</sound>
+    <sound>sound\snd_moon_night</sound>
+    <sound>sound\snd_invis_day</sound>
+    <sound>sound\snd_invis_night</sound>
+    <sound>sound\snd_rich_day</sound>
+    <sound>sound\snd_rich_night</sound>
+    <sound>sound\snd_chip_night</sound>
+    <sound>sound\snd_chip_day</sound>
+    <sound>sound\snd_cube_night</sound>
+    <sound>sound\snd_cube_day</sound>
+    <sound>sound\snd_real_day</sound>
+    <sound>sound\snd_real_night</sound>
+    <sound>sound\snd_ice_day</sound>
+    <sound>sound\snd_ice_night</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_rock</sprite>

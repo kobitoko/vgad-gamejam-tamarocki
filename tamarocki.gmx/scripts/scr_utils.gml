@@ -9,6 +9,19 @@ if (instance_exists(obj_rock) and device_mouse_check_button_pressed(device, mb_l
         obj_rock, true, false);
     if (colliders == obj_rock.id) {
         global.rockClicks++;
+        
+        if (rockType == 1) {
+            //SUN ROCK
+            effect_create_above(ef_flare, mouse_x, mouse_y, 1, c_orange);
+            effect_create_above(ef_flare, mouse_x, mouse_y, 0, c_yellow);
+        } else if (rockType == 2) {
+            //MOON ROCK
+            effect_create_above(ef_cloud, mouse_x, mouse_y, 0, c_white);
+            effect_create_above(ef_cloud, mouse_x-10, mouse_y+5, 0, c_white);
+            effect_create_above(ef_cloud, mouse_x+20, mouse_y-10, 0, c_white);
+            effect_create_above(ef_smoke, mouse_x, mouse_y, 0, c_ltgray);
+        }
+        
         if(global.rockClicks == 100){
             global.achievementTitle = "Cube Rock";
             global.achievementDesc = "Click on "+global.name+" 100 times.";
@@ -90,9 +103,61 @@ if (not audio_is_playing(argument0))
     audio_play_sound(argument0, 10, true);
 #define scr_playDayNightBgm
 if (global.daynight) {
-    if (not sound_isplaying(snd_daytime))
-        script_execute(scr_playBgm, snd_daytime);
+    if (global.rockType == 0) {
+        if (not sound_isplaying(snd_daytime))
+            script_execute(scr_playBgm, snd_daytime);
+    } else if (global.rockType == 1) {
+        if (not sound_isplaying(snd_sun_day))
+            script_execute(scr_playBgm, snd_sun_day);
+    } else if (global.rockType == 2) {
+        if (not sound_isplaying(snd_moon_day))
+            script_execute(scr_playBgm, snd_moon_day);
+    } else if (global.rockType == 3) {
+        if (not sound_isplaying(snd_chip_day))
+            script_execute(scr_playBgm, snd_chip_day);
+    } else if (global.rockType == 4) {
+        if (not sound_isplaying(snd_cube_day))
+            script_execute(scr_playBgm, snd_cube_day);
+    } else if (global.rockType == 5) {
+        if (not sound_isplaying(snd_rich_day))
+            script_execute(scr_playBgm, snd_rich_day);
+    } else if (global.rockType == 6) {
+        if (not sound_isplaying(snd_invis_day))
+            script_execute(scr_playBgm, snd_invis_day);
+    } else if (global.rockType == 7) {
+        if (not sound_isplaying(snd_ice_day))
+            script_execute(scr_playBgm, snd_ice_day);
+    } else if (global.rockType == 8) {
+        if (not sound_isplaying(snd_real_day))
+            script_execute(scr_playBgm, snd_real_day);
+    }
 } else {
-    if (not sound_isplaying(snd_night))
-        script_execute(scr_playBgm, snd_night);
+    if (global.rockType == 0) {
+        if (not sound_isplaying(snd_night))
+            script_execute(scr_playBgm, snd_night);
+    } else if (global.rockType == 1) {
+        if (not sound_isplaying(snd_sun_night))
+            script_execute(scr_playBgm, snd_sun_night);
+    } else if (global.rockType == 2) {
+        if (not sound_isplaying(snd_moon_night))
+            script_execute(scr_playBgm, snd_moon_night);
+    } else if (global.rockType == 3) {
+        if (not sound_isplaying(snd_chip_night))
+            script_execute(scr_playBgm, snd_chip_night);
+    } else if (global.rockType == 4) {
+        if (not sound_isplaying(snd_cube_night))
+            script_execute(scr_playBgm, snd_cube_night);
+    } else if (global.rockType == 5) {
+        if (not sound_isplaying(snd_rich_night))
+            script_execute(scr_playBgm, snd_rich_night);
+    } else if (global.rockType == 6) {
+        if (not sound_isplaying(snd_invis_night))
+            script_execute(scr_playBgm, snd_invis_night);
+    } else if (global.rockType == 7) {
+        if (not sound_isplaying(snd_ice_night))
+            script_execute(scr_playBgm, snd_ice_night);
+    } else if (global.rockType == 8) {
+        if (not sound_isplaying(snd_real_night))
+            script_execute(scr_playBgm, snd_real_night);
+    }
 }
