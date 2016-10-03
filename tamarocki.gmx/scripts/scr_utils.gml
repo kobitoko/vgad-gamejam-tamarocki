@@ -10,6 +10,9 @@ if (instance_exists(obj_rock) and device_mouse_check_button_pressed(device, mb_l
     if (colliders == obj_rock.id) {
         global.rockClicks++;
         if(global.rockClicks >= 100){
+            global.achievementTitle = "Cube Rock";
+            global.achievementDesc = "Click on "+global.name+" 100 times.";
+            instance_create(obj_rock.x, obj_rock.y+200, obj_ui_toast);
             achievementsUnlocked[3] = true;
         }
         script_execute(scr_dialogue);
@@ -31,6 +34,9 @@ if (instance_exists(obj_button_feed) and device_mouse_check_button_released(devi
         //script_execute(scr_text ,"Thanks for the food...", obj_rock.x, obj_rock.y, 1);
         if(instance_number(obj_candy) <= 0) {
             if(global.feedClicks >= 100){
+                global.achievementTitle = "Chipped Rock";
+                global.achievementDesc = "Try to feed "+global.name+" 100 times.";
+                instance_create(obj_rock.x, obj_rock.y+200, obj_ui_toast);
                 achievementsUnlocked[2] = true;
             }
             instance_create(room_width*0.5, room_height*0.9, obj_candy);
@@ -57,6 +63,9 @@ if (instance_exists(obj_sun_moon) and device_mouse_check_button_pressed(device, 
                 global.sunClicks++;
                 global.sunClickedToday = true;
                 if(global.sunClicks >= 10){
+                    global.achievementTitle = "Sun Rock";
+                    global.achievementDesc = "Click on the Sun on 10 separate days.";
+                    instance_create(obj_rock.x, obj_rock.y+200, obj_ui_toast);
                     global.achievementsUnlocked[0] = true;
                 }
             }
@@ -69,6 +78,9 @@ if (instance_exists(obj_sun_moon) and device_mouse_check_button_pressed(device, 
                 global.moonClicks++;
                 global.moonClickedToday = true;
                 if(global.moonClicks >= 10){
+                    global.achievementTitle = "Moon Rock";
+                    global.achievementDesc = "Click on the Moon on 10 separate days.";
+                    instance_create(obj_rock.x, obj_rock.y+200, obj_ui_toast);
                     global.achievementsUnlocked[1] = true;
                 }
             }

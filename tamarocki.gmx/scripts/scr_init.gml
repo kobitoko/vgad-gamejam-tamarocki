@@ -12,6 +12,10 @@ globalvar alpha;
 globalvar rockType;
 globalvar createRock;
 
+//Achievement Toast Vars
+globalvar achievementTitle;
+globalvar achievementDesc;
+
 //Achievement tracking variables
 globalvar achievementsUnlocked;
 globalvar feedClicks;
@@ -32,6 +36,9 @@ global.day = 0;
 global.food = 0;
 global.currentMusic = snd_daytime;
 global.mainfont = font1;
+
+global.achievementTitle = "Sun Rock";
+global.achievementDesc = "Click on the Sun on 10 separate days.";
 
 global.feedClicks = 0;
 global.achieveClicks = 0;
