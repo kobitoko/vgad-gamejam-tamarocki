@@ -204,7 +204,12 @@ if (not is_undefined(identity) and identity == msg) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_font(font1);
+            <string>if (global.daynight) {
+    draw_set_colour(c_black);
+} else {
+    draw_set_colour(c_white);
+}
+draw_set_font(font1);
 var txtLen = clamp(string_width(global.name), 0, 300);
 var txtCenter = (room_width-txtLen)*0.5;
 draw_text_ext(txtCenter, 20, global.name, 20, 300);
@@ -231,7 +236,12 @@ draw_set_font(global.mainfont);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//draw_text(10, 10, obj_sun_moon.image_angle);
+            <string>if (global.daynight) {
+    draw_set_colour(c_black);
+} else {
+    draw_set_colour(c_white);
+}
+//draw_text(10, 10, obj_sun_moon.image_angle);
 draw_text(50, 10, global.sunClicks);
 draw_text(100, 40, global.moonClicks);
 flag = phy_debug_render_aabb | phy_debug_render_shapes | phy_debug_render_core_shapes | phy_debug_render_collision_pairs | phy_debug_render_obb;
@@ -286,90 +296,6 @@ if (global.createRock) {
     global.createRock = false;
 }
 </string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="32">
-      <action>
-        <libid>1</libid>
-        <id>601</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_execute_script</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>9</kind>
-            <script>scr_switch_rock</script>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>7</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="17">
-      <action>
-        <libid>1</libid>
-        <id>601</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_execute_script</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>9</kind>
-            <script>scr_switch_rock</script>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>5</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
           </argument>
         </arguments>
       </action>

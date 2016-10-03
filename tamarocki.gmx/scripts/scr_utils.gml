@@ -51,6 +51,8 @@ if (instance_exists(obj_sun_moon) and device_mouse_check_button_pressed(device, 
         obj_sun_moon, true, false);
     if (colliders == obj_sun_moon.id) {
         if(global.daynight == true){
+            effect_create_above(ef_flare, mouse_x, mouse_y, 1, c_orange);
+            effect_create_above(ef_flare, mouse_x, mouse_y, 0, c_yellow);
             if(global.sunClickedToday == false){
                 global.sunClicks++;
                 global.sunClickedToday = true;
@@ -59,6 +61,10 @@ if (instance_exists(obj_sun_moon) and device_mouse_check_button_pressed(device, 
                 }
             }
         }else{
+            effect_create_above(ef_cloud, mouse_x, mouse_y, 0, c_white);
+            effect_create_above(ef_cloud, mouse_x-10, mouse_y+5, 0, c_white);
+            effect_create_above(ef_cloud, mouse_x+20, mouse_y-10, 0, c_white);
+            effect_create_above(ef_smoke, mouse_x, mouse_y, 0, c_ltgray);
             if(global.moonClickedToday == false){
                 global.moonClicks++;
                 global.moonClickedToday = true;
