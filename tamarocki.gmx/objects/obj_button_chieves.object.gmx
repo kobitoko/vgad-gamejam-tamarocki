@@ -73,6 +73,11 @@
           <argument>
             <kind>1</kind>
             <string>global.achieveClicks++;
+
+if (audio_is_playing(global.currentMusic))
+    audio_stop_sound(global.currentMusic);
+if (not audio_is_playing(snd_trophy))
+    audio_play_sound(snd_trophy, 10, true);
 </string>
           </argument>
         </arguments>

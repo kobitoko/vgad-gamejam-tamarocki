@@ -75,8 +75,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (device_mouse_check_button_pressed(0, mb_left)) {
-    obj_rock.curr_state = 1;
+            <string>if (device_mouse_check_button_pressed(0, mb_left) and not keyboard_string == "") {
     self.left_click = 1;
     time = current_time;
 }
@@ -195,8 +194,29 @@
           <argument>
             <kind>1</kind>
             <string>var eff;
-eff = instance_create(0, 0, eff_fadetoblack);
+eff = instance_create(0, 0, eff_fadein);
+name = keyboard_string;
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>212</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_end_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>snd_darkroom</sound>
           </argument>
         </arguments>
       </action>
@@ -233,7 +253,7 @@ eff = instance_create(0, 0, eff_fadetoblack);
           <argument>
             <kind>1</kind>
             <string>draw_set_font(font1);
-draw_set_colour(c_black);
+draw_set_colour(c_lime);
 
 var alpha = current_time % 2000;
 if (alpha &lt; 1000)
@@ -241,7 +261,7 @@ if (alpha &lt; 1000)
 else
     alpha = 1;
 draw_set_alpha(alpha);
-draw_text(self.x - (32+string_width("Click To Start"))/2, self.y, "Click To Start");
+draw_text(self.x - (32+string_width("Click To Begin Your Adventure"))/2, self.y, "Click To Begin Your Adventure");
 draw_set_alpha(1);
 </string>
           </argument>

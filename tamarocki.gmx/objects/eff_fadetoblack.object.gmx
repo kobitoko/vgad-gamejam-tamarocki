@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-30</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -53,7 +53,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>10</string>
+            <string>2</string>
           </argument>
         </arguments>
       </action>
@@ -169,6 +169,30 @@ fadeAlpha += 0.05;
       </action>
       <action>
         <libid>1</libid>
+        <id>211</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>snd_darkroom</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
+            <string>1</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>224</id>
         <kind>0</kind>
         <userelative>0</userelative>
@@ -183,7 +207,7 @@ fadeAlpha += 0.05;
         <arguments>
           <argument>
             <kind>11</kind>
-            <room>room1</room>
+            <room>room_dark</room>
           </argument>
         </arguments>
       </action>
@@ -223,7 +247,7 @@ fadeAlpha += 0.05;
         <isnot>0</isnot>
       </action>
     </event>
-    <event eventtype="8" enumb="64">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>

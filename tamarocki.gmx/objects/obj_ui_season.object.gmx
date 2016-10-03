@@ -53,6 +53,12 @@ var days = 0;
 season = (global.day div 3) % 4;
 //Day: 3 days per season
 days = global.day % 3;
+if(season&gt;2){
+    achievementsUnlocked[6] = true;
+}
+if(season&gt;3){
+    achievementsUnlocked[7] = true;
+}
 </string>
           </argument>
         </arguments>

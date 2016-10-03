@@ -14,6 +14,8 @@
     <sound>sound\snd_newday</sound>
     <sound>sound\snd_newnight</sound>
     <sound>sound\snd_hit</sound>
+    <sound>sound\snd_trophy</sound>
+    <sound>sound\snd_darkroom</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_rock</sprite>
@@ -65,14 +67,18 @@
     <object>objects\obj_hitfx</object>
     <object>objects\obj_title</object>
     <object>objects\obj_subtitle</object>
+    <object>objects\obj_threat</object>
     <object>objects\OBJ_FAKE</object>
     <object>objects\eff_fadetoblack</object>
     <object>objects\obj_rock_falling</object>
     <object>objects\obj_rock_dummy</object>
+    <object>objects\eff_fadein</object>
+    <object>objects\obj_commandPrompt</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_title</room>
-    <room>rooms\room1</room>
+    <room>rooms\room_dark</room>
+    <room>rooms\room_main</room>
     <room>rooms\room_highscore</room>
   </rooms>
   <help>
