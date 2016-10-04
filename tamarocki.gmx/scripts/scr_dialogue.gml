@@ -1,8 +1,7 @@
 var i = irandom(array_length_1d(global.dialogueClick) - 1);
 var dialogueOfSeason = global.dialogueClick;
 var j;
-switch((global.day div 3))
-{
+switch((global.day div 3) % 12) {
     case 0:
         dialogueOfSeason = global.dialogueSummer;
         j = irandom(array_length_1d(global.dialogueSummer) - 1);
@@ -22,6 +21,7 @@ switch((global.day div 3))
         
     default:
         dialogueOfSeason = global.dialogueClick;
+        j = 1;
         break;
 }
 
@@ -32,13 +32,13 @@ if(irandom(1)){
     currentDialogue = dialogueOfSeason[j];
 }
 if(global.rockClicks==98){
-    currentDialogue = "Rocki feels strong...";
+    currentDialogue = global.name+" feels strong...";
 }
 if(global.rockClicks==99){
-    currentDialogue = "Rocki feels changed...";
+    currentDialogue = global.name+" feels changed...";
 }
 if(global.rockClicks==100){
-    currentDialogue = "Rocki feels TOUGH!";
+    currentDialogue = global.name+" feels TOUGH!";
     //Achievement unlocked~!~
 }
 

@@ -81,7 +81,7 @@ if (self.image_angle &gt;= 50) {
         audio_play_sound(snd_newnight, 10, false);
         
         // Change the music to night time
-        script_execute(scr_playBgm, snd_night);
+        script_execute(scr_playDayNightBgm);
     } else {
         global.daynight = true;
         self.image_index = 0;
@@ -91,7 +91,7 @@ if (self.image_angle &gt;= 50) {
         audio_play_sound(snd_newday, 10, false);
         
         // Change the music to daytime
-        script_execute(scr_playBgm, snd_daytime);
+        script_execute(scr_playDayNightBgm);
     }
 }
 </string>

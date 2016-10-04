@@ -16,6 +16,22 @@
     <sound>sound\snd_hit</sound>
     <sound>sound\snd_trophy</sound>
     <sound>sound\snd_darkroom</sound>
+    <sound>sound\snd_sun_day</sound>
+    <sound>sound\snd_sun_night</sound>
+    <sound>sound\snd_moon_day</sound>
+    <sound>sound\snd_moon_night</sound>
+    <sound>sound\snd_invis_day</sound>
+    <sound>sound\snd_invis_night</sound>
+    <sound>sound\snd_rich_day</sound>
+    <sound>sound\snd_rich_night</sound>
+    <sound>sound\snd_chip_night</sound>
+    <sound>sound\snd_chip_day</sound>
+    <sound>sound\snd_cube_night</sound>
+    <sound>sound\snd_cube_day</sound>
+    <sound>sound\snd_real_day</sound>
+    <sound>sound\snd_real_night</sound>
+    <sound>sound\snd_ice_day</sound>
+    <sound>sound\snd_ice_night</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_rock</sprite>
@@ -40,6 +56,7 @@
     <background>background\bg_top_day</background>
     <background>background\bg_bottom_lightgrass</background>
     <background>background\bg_bottom_fallleaves</background>
+    <background>background\bg_trophy</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path_throw</path>
@@ -60,6 +77,7 @@
     <object>objects\obj_controller</object>
     <object>objects\obj_rock</object>
     <object>objects\obj_button_feed</object>
+    <object>objects\obj_icon_normal</object>
     <object>objects\obj_icon_sun</object>
     <object>objects\obj_icon_moon</object>
     <object>objects\obj_icon_rich</object>
@@ -87,6 +105,7 @@
     <object>objects\obj_rock_dummy</object>
     <object>objects\eff_fadein</object>
     <object>objects\obj_commandPrompt</object>
+    <object>objects\obj_text_normal</object>
     <object>objects\obj_text_sun</object>
     <object>objects\obj_text_rich</object>
     <object>objects\obj_text_chipped</object>
