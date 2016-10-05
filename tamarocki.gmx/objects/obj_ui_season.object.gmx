@@ -53,10 +53,20 @@ var days = 0;
 season = (global.day div 3) % 4;
 //Day: 3 days per season
 days = global.day % 3;
-if(season&gt;2){
+if(season &gt; 2 and not global.winterPassed){ //WINTER
+    global.achievementTitle = "Ice Rock";  
+    global.achievementDesc = "Survive Winter.";
+    instance_create(obj_rock.x, obj_rock.y+200, obj_ui_toast);
+
+    global.winterPassed = true;
     achievementsUnlocked[6] = true;
 }
-if(season&gt;3){
+if(season &gt; 3 and not global.yearPassed){ //YEAR
+    global.achievementTitle = "Real Rock";
+    global.achievementDesc = "Survive for a year.";
+    instance_create(obj_rock.x, obj_rock.y+200, obj_ui_toast);
+
+    global.yearPassed = true;
     achievementsUnlocked[7] = true;
 }
 </string>

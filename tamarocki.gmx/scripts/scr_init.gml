@@ -23,6 +23,9 @@ globalvar moonClicks;
 globalvar sunClickedToday;
 globalvar moonClickedToday;
 
+globalvar yearPassed;
+globalvar winterPassed;
+
 for(var i = 0; i < 8; i++){
     achievementsUnlocked[i] = false;//true;
 }
@@ -74,3 +77,6 @@ global.alpha = 0;
 
 global.createRock = false;
 global.time = current_time;
+global.yearPassed = false;
+global.winterPassed = false;
+
